@@ -10,7 +10,7 @@ int main(int argc, const char * argv[]) {
   int a;
   char c;
   /* ouverture de fichier � tester */
-  openfile("C:/Users/elmra/Desktop/Compiler/test.txt");
+  openfile("test.txt");
   /* analyse lexicale */
   a=analyse_lexicale();
   /* analyse_syntaxique */
