@@ -8,9 +8,10 @@
 
 int main(int argc, const char * argv[]) {
   int a;
-  char c;
+  char c[100];
+  scanf("%s",c);
   /* ouverture de fichier � tester */
-  openfile("test.txt");
+  openfile(c);
   /* analyse lexicale */
   a=analyse_lexicale();
   /* analyse_syntaxique */
