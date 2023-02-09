@@ -1,0 +1,52 @@
+start_program
+	declare_patient(float CCMH <- 35 ,TCMH<-29;
+               float glyc <- 2,creatinine<- 35;
+ 			   );
+
+	start float Function glycemie(float glyc,float TCMH  )
+
+
+		if glyc>=2 then
+			show_results("hyperglycemie");
+			elsif glyc<1
+			then
+			show_results("hypoglycemie");
+		end if
+
+		return glyc;
+		
+		end Function glycemie
+
+	start void Main_function()
+
+		d <- glycemie(CCMH,TCMH);
+	
+		if d>=2 then
+			show_results(d);
+			elsif d<2
+			then
+			show_results("Patient hypoglycemique");
+		end if
+
+		while c<3 then
+			
+		end while
+
+		for ( a<-3; a < 40; a<-a+1)
+		 			show_results("for is working fine");
+		end for
+
+		switch (a)
+		  case 1 : show_results("switch is working fine");
+			     break;
+		  case 2 : enter_params(creatinine);
+			     show_results("input is working fine");
+			     break;
+		end switch
+
+		show_results("fin main function");
+
+	end Main_function
+
+
+end_program

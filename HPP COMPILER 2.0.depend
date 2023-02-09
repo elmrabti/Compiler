@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1675898329 source:c:\users\pc asus\documents\travaux c\hpp compiler 2.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"lex.c"
+	"syn.c"
+	"lex.h"
+	"syntax.h"
+
+1675905611 c:\users\pc asus\documents\travaux c\hpp compiler 2.0\lex.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1675897720 c:\users\pc asus\documents\travaux c\hpp compiler 2.0\syntax.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1675906709 c:\users\pc asus\documents\travaux c\hpp compiler 2.0\lex.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"lex.h"
+	"syntax.h"
+
+1675897643 c:\users\pc asus\documents\travaux c\hpp compiler 2.0\syn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"lex.h"
+	"syntax.h"
+
