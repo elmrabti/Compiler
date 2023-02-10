@@ -1,11 +1,9 @@
 start_program
 	declare_patient(float CCMH <- 35 ,TCMH<-29;
-               float glyc <- 2,creatinine<- 35;
- 			   );
+               float glyc <- 2,creatinine<- 35;);
 
 	start float Function glycemie(float glyc,float TCMH  )
-
-
+                
 		if glyc>=2 then
 			show_results("hyperglycemie");
 			elsif glyc<1

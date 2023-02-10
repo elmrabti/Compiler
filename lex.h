@@ -25,7 +25,7 @@ typedef struct class
 
 class* head;
 class* temp;
-char mot[500];
+char mot[50];
 char Car_Cour;
 FILE* fichier;
 int analyse_lexicale();
