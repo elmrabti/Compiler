@@ -6,13 +6,13 @@
 /* fonction principale d'analayse lexicale */
 
      int analyse_lexicale(){
-       /* allocation mémoire de temp de type la structure class */
+       /* allocation mï¿½moire de temp de type la structure class */
        temp=(class *)malloc(sizeof(class));
 
-       /* lecture du premier caractère */
+       /* lecture du premier caractï¿½re */
 
        Lire_Car();
-       /* vérification de mot par mot jusqu'à la fin du fichier */
+       /* vï¿½rification de mot par mot jusqu'ï¿½ la fin du fichier */
        while(Car_Cour!=EOF){
            analyse();
            Lire_Car();
@@ -21,22 +21,22 @@
        printf("EOF_TOKEN \n");
        temp->cls=EOF_TOKEN;
        temp->nom="EOF";
-       /* ajouter le token de fin pour marquer la fin de vérification */
+       /* ajouter le token de fin pour marquer la fin de vï¿½rification */
        ajouter();
-       /* afficher la liste chainée et ecriture des résultats des tokens sur un fichier txt */
+       /* afficher la liste chainï¿½e et ecriture des rï¿½sultats des tokens sur un fichier txt */
        afficherListe();
-       /* initialisation du pointeur temp sur la tete de la lise chainée */
+       /* initialisation du pointeur temp sur la tete de la lise chainï¿½e */
       temp=head;
       int i=0;
        printf("=====================================================================\n");
        printf("     ===================FIN ANALYSE LEXICALE===================\n");
-       /* chercher l'ERREUR sur la liste en parcourant la liste chainée créée */
+       /* chercher l'ERREUR sur la liste en parcourant la liste chainï¿½e crï¿½ï¿½e */
       while((strcmp(conversion(temp->cls),"ERREUR_TOKEN")!=0)&&(temp->next!=NULL))
       {
        temp=temp->next;
        i =i+1;
       }
-      /* affichage de resultat de vérification */
+      /* affichage de resultat de vï¿½rification */
        if (temp!=NULL && temp->cls!=EOF_TOKEN){
        printf("               !!!!!!!!!lexique incorrecte!!!!!!! %s ligne %d\n",conversion(temp->cls),i);
        printf("               =================================\n");
@@ -48,7 +48,7 @@
        return 0;
        }
      }
-/* lecture des caractères à partir du cfichier */
+/* lecture des caractï¿½res ï¿½ partir du cfichier */
     char Lire_Car(){
         Car_Cour = fgetc(fichier);
         return Car_Cour;
@@ -56,12 +56,12 @@
  /* verification d'un mot */
     CODES_LEX lire_mot(){
 
- /* constitution de mot à vérifier */
+ /* constitution de mot ï¿½ vï¿½rifier */
      while(((Car_Cour>='a'&& Car_Cour<='z' ) || (Car_Cour>='A'&& Car_Cour<='Z') || (Car_Cour>='0' && Car_Cour<='9') || (Car_Cour=='_')) && (Car_Cour!=' ')){
         strncat(mot, &Car_Cour,1);
         Lire_Car();
     }
-/* test sur le constitué */
+/* test sur le constituï¿½ */
 
     if(strcmp(mot, "start_program")==0){
         printf("%s ===> STARTPROGRAM_TOKEN\n",mot);
@@ -287,7 +287,7 @@
     /* verification commentaire */
         return temp->cls;
     }
-/* test du type du mot à analyser*/
+/* test du type du mot ï¿½ analyser*/
     CODES_LEX analyse(){
       //mot=(char*)malloc(sizeof (char*));
       int i = 0;
@@ -331,7 +331,7 @@
                         exit(1);
                       }
     }
-/* ajout des resultats de test dans une liste chainée */
+/* ajout des resultats de test dans une liste chainï¿½e */
     void ajouter(){
 
         class* last=head;
@@ -350,7 +350,7 @@
           }
         return;
         }
-/* affichage de la liste chainée et écriture sur le fichier résultat */
+/* affichage de la liste chainï¿½e et ï¿½criture sur le fichier rï¿½sultat */
     void afficherListe(){
          printf("======================================================================\n");
          printf("===========================LISTE DES TOKENS===========================\n");
@@ -369,7 +369,7 @@
             i=i+1;
         }
     }
-/* conversion des valeurs du enum créé en chaine de caractère */
+/* conversion des valeurs du enum crï¿½ï¿½ en chaine de caractï¿½re */
     char * conversion(CODES_LEX cls){
 
     switch(cls){

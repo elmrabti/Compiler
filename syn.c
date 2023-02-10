@@ -4,7 +4,7 @@
   #include "lex.h"
   #include "syntax.h"
 
-/* passage d'un symbole à l'autre */
+/* passage d'un symbole ï¿½ l'autre */
   void Sym_Suiv(){
       temp = temp->next;
   }
@@ -59,7 +59,7 @@
 
   }
   }
-/* test de symobole passer ne paramètre avec les elts de la liste chainée*/
+/* test de symobole passer ne paramï¿½tre avec les elts de la liste chainï¿½e*/
   void Test_Symbole (CODES_LEX cl, ERREURS COD_ERR){
 
       if (temp->cls == cl)
@@ -379,7 +379,7 @@ void SWITCH(){
       default: Erreur(COND_ERR,i);break;
     }
   }
-/* verification de ce qui est après le  WHILE */
+/* verification de ce qui est aprï¿½s le  WHILE */
   void TANTQUE() {
     Test_Symbole(WHILE_TOKEN,WHILE_ERR);
     COND();
@@ -391,7 +391,7 @@ void SWITCH(){
     Test_Symbole(WHILE_TOKEN,WHILE_ERR);
 
 }
-/* verification de ce qui est après le  show_results */
+/* verification de ce qui est aprï¿½s le  show_results */
   void ECRIRE(){
       Test_Symbole(PRINT_TOKEN,PRINT_ERR);
       Test_Symbole(PO_TOKEN,PO_ERR);
@@ -406,7 +406,7 @@ void SWITCH(){
         }
       Test_Symbole(PF_TOKEN,PF_ERR);
     }
-/* verification de ce qui est après le  enter_params*/
+/* verification de ce qui est aprï¿½s le  enter_params*/
   void LIRE() {
 
     Test_Symbole(PUT_TOKEN,PUT_ERR);
@@ -426,7 +426,7 @@ void SWITCH(){
     temp=head;
      printf("***************************TEST DES TOKENS****************************\n");
      printf("   ================================================================\n");
-    /* analyse du programme proposé */
+    /* analyse du programme proposï¿½ */
     PROGRAM();
     /* affichage du resultat d'analyse */
      printf("     ==========================================================\n");
