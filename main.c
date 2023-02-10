@@ -8,10 +8,9 @@
 
 int main(int argc, const char * argv[]) {
   int a;
-  char c[100];
-  scanf("%s",c);
-  /* ouverture de fichier ï¿½ tester */
-  openfile(c);
+  char c;
+  /* ouverture de fichier à tester */
+  openfile("C:/Users/PC ASUS/Documents/TRAVAUX C/HPP COMPILER 2.0/test.txt");
   /* analyse lexicale */
   a=analyse_lexicale();
   /* analyse_syntaxique */

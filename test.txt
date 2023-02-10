@@ -1,9 +1,11 @@
 start_program
 	declare_patient(float CCMH <- 35 ,TCMH<-29;
-               float glyc <- 2,creatinine<- 35;);
+               float glyc <- 2,creatinine<- 35;
+ 			   );
 
 	start float Function glycemie(float glyc,float TCMH  )
-                
+
+
 		if glyc>=2 then
 			show_results("hyperglycemie");
 			elsif glyc<1
@@ -31,7 +33,7 @@ start_program
 		end while
 
 		for ( a<-3; a < 40; a<-a+1)
-	show_results("for is working fine");
+		 			show_results("for is working fine");
 		end for
 
 		switch (a)
